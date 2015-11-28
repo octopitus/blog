@@ -1,4 +1,3 @@
 [submodule "public"]
 	path = public
 	url = git@github.com:octopitus/octopitus.github.io.git
-  ignore = dirty

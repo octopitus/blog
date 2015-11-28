@@ -1,0 +1,57 @@
+    <header id="site-header">
+        <div class="container">
+            <a href="{{ .Site.BaseURL }}" alt="{{ .Site.Title }}"><h1 class="blog-title heading">{{ .Site.Title }}</h1></a>
+            <p class="blog-description">{{ .Site.Params.description }} </p>
+            <!-- Social accounts/contact info -->
+            <ul class="horizontal-list horizontal-list--center">
+                 {{ if .Site.Params.twitter }}
+                    <!-- Twitter -->
+                    <li class="navigation__item">
+                        <a href="http://twitter.com/{{ .Site.Params.twitter }}" title="@{{ .Site.Params.twitter }} on Twitter">
+                            <i class='icon-twitter-squared'></i>
+                        </a>
+                    </li>
+                {{ end }}
+                {{ if .Site.Params.bitbucket }}
+                <!-- Bitbucket -->
+                <li class="navigation__item">
+                    <a href="https://bitbucket.org/{{ .Site.Params.bitbucket }}" title="{{ .Site.Params.bitbucket }} on bitbucket">
+                        <i class='icon-bitbucket-squared'></i>
+                     </a>
+                </li>
+                {{ end }}
+                {{ if .Site.Params.github }}
+                <!-- github -->
+                <li class="navigation__item">
+                    <a href="https://github.com/{{ .Site.Params.github }}" title="{{ .Site.Params.github }} on github">
+                        <i class='icon-github-squared'></i>
+                    </a>
+                </li>
+                {{ end }}
+                {{ if .Site.Params.flickr }}
+                <!-- Flickr -->
+                <li class="navigation__item">
+                    <a href="http://www.flickr.com/photos/{{ .Site.Params.flickr }}/" title="{{ .Site.Params.flickr }} on flickr">
+                        <i class='icon-flickr'></i>
+                    </a>
+                </li>
+                {{ end }}
+                {{ if .Site.Params.linkedin }}
+                <!-- Linkedin -->
+                <li class="navigation__item">
+                    <a href="https://no.linkedin.com/in/{{ .Site.Params.linkedin }}/en" title="Linkedin">
+                        <i class='icon-linkedin-squared'></i>
+                    </a>
+                </li>
+                {{ end }}
+                {{ if .Site.Params.email }}
+                <!-- Email -->
+                <li class="navigation__item">
+                    <a href="mailto:{{ .Site.Params.email }}" title="Email {{ .Site.Params.email }}">
+                        <i class='icon-mail-squared'></i>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </header>
