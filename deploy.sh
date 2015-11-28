@@ -22,3 +22,8 @@ git push origin master
 
 # Come Back
 cd ..
+
+# Update submodule
+git submodule update --quiet
+git add -A
+git commit -m "$msg"
